@@ -1,3 +1,5 @@
 db.version();
+// show dbs
 use("training_geography")
-db.createCollection("Countries")
+// db.createCollection("Countries")
+// show (collection)
