@@ -1,10 +1,8 @@
-db.version()
+require('jquery-csv');
+const {MongoClient} = require('mongodb');
+async function main() {
+    uri='mongodb+srv://geldbogen:2KrudEufu@cluster0.en2gjsz.mongodb.net/?retryWrites=true&w=majority'
+    const client = new MongoClient(uri);
 
-const database = 'geography_database';
-const collection = 'geography_collection';
-
-// Create a new database.
-use(database);
-
-// Create a new collection.
-db.createCollection(collection);
+}
+main();
