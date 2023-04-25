@@ -25,12 +25,17 @@ for (let index = 0; index < data.length; index++) {
 console.log(data)
 
 async function main() {
-    uri='mongodb+srv://geldbogen2:548L22XWv4iCxB8@cluster0.en2gjsz.mongodb.net/?retryWrites=true&w=majority'
+    uri='mongodb+srv://geldbogen:2KrudEufu@cluster0.en2gjsz.mongodb.net/?retryWrites=true&w=majority'
     const client = new MongoClient(uri);
     try {
     await client.connect();
     const training_geography = client.db("training_geography");
     const countries = training_geography.collection("Countries")
+    for (let index = 0; index < data.length; index++) {
+        const element = data[index];
+        const result = await countries.insertOne(element);   
+        console.log(index);     
+    }
     }
     catch (e) {
         console.error(e);
