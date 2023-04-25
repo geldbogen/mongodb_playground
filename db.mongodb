@@ -1,5 +1,9 @@
+var csv = require('moment');
 db.version();
 // show dbs
 use("training_geography")
+// db.Countries.insertOne({name:"Germany","HDI":9.1,"GDP":8000})
+db.Countries.count()
+db.Countries.find()
 // db.createCollection("Countries")
 // show (collection)
